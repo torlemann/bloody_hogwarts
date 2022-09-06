@@ -4,7 +4,7 @@ class Course < ApplicationRecord
     has_many :student_courses
     has_many :students, through: :student_courses
 
-    # def enrollment
-    #     students.count
-    # end
+    def students_per_course
+        students.count
+    end
 end
